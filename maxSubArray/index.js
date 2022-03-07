@@ -3,7 +3,7 @@ function maxSubArray(nums) {
   let maxNums = nums[0]
   nums.forEach(item => {
     pre = Math.max(item, item + pre)
-    maxNums = maxNums(pre, maxNums)
+    maxNums = Math.max(pre, maxNums)
   });
   return maxNums
 }

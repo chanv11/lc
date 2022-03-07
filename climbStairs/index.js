@@ -1,8 +1,9 @@
-/*
- * @Author: your name
- * @Date: 2022-03-04 13:37:16
- * @LastEditTime: 2022-03-04 13:37:16
- * @LastEditors: Please set LastEditors
- * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /lc/climbStairs/index.js
- */
+function climbStairs(n) {
+  const dp = 0
+  dp[0] = 1
+  dp[1] = 1
+  for (let i = 2; i < n.length; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2]
+  }
+  return dp[n]
+}
